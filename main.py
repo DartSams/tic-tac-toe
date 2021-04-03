@@ -26,7 +26,6 @@ def draw_squares():
     ninth=pygame.draw.rect(screen,white,(350,350,100,100))
 
 draw_squares()
-# squares_lst=[first,second,third,fourth,fifth,sixth,seventh,eigth,ninth]
 
 class squares:
     def __init__(self,square,state):
@@ -59,10 +58,8 @@ def win_screen(player):
 
     
 
-
 def main():
     player1=True
-    # current_player=pygame.draw.circle(screen,(255,0,0),(15,15),10,8)
     pygame.draw.rect(screen,black,(0,0,width,50))
     pygame.display.update()
     current_player='X'
@@ -80,12 +77,9 @@ def main():
 
             if event.type==pygame.MOUSEBUTTONUP:
                 pos=pygame.mouse.get_pos()
-                # print(pos)
                 if player1==True:
                     for i in squares_lst:
                         if i.square.collidepoint(pos):
-                            print(i)
-                            print(i.square[0],i.square[1],i.square[2],i.square[3])
                             pygame.draw.line(screen,(255,0,0),(i.square[0]+5,i.square[1]+5),(i.square[0]+i.square[2]-5,i.square[1]+i.square[2]-5),8)
                             pygame.draw.line(screen,(255,0,0),(i.square[0]+i.square[2]-5,i.square[1]+5),(i.square[0]+5,i.square[1]+i.square[2]-5),8)
                             i.state='Player1'
@@ -107,7 +101,6 @@ def main():
                     pygame.draw.rect(screen,black,(0,0,width,50))
                     pygame.display.update()
                     
-                    # current_player=pygame.draw.circle(screen,(255,0,0),(15,15),10,8)
                     current_player='X'
                     current_player=text.render(f"{current_player} turn" ,1,(255,255,255))
                     screen.blit(current_player,(10,2))
@@ -118,7 +111,6 @@ def main():
                     pygame.draw.rect(screen,black,(0,0,width,50))
                     pygame.display.update()
                     
-                    # current_player=pygame.draw.circle(screen,(0,0,255),(15,15),10,8)
                     current_player='O'
                     current_player=text.render(f"{current_player} turn" ,1,(255,255,255))
                     screen.blit(current_player,(10,2))
