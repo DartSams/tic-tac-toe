@@ -1,6 +1,6 @@
 # Tic-Tac-Toe
 
-- this is a simple 2 player game of tic-tac-toe using Pygame's GUI
+This is a simple 2 player game of tic-tac-toe using Pygame's GUI
 
 ## Installations
 - Clone the repository
